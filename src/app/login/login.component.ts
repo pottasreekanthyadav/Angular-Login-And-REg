@@ -56,6 +56,11 @@ export class LoginComponent {
 
 
 	public login(){
+	
+		if(this.s1==undefined && this.s2==undefined){
+			alert ("Please Enter Email and Password");
+		}
+		else{
 		var email=this.s1;
 		var a2=this;
 		var url:string="http://localhost:3000/student/"+email;
@@ -67,8 +72,11 @@ export class LoginComponent {
 			else{
 				alert("Invalid User");
 			}
+
+
 		});
 		
+		}
 		
 
 	}
